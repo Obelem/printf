@@ -26,7 +26,7 @@ int check_specifier(const char *format, int count, int i, va_list args)
 	{
 		_putchar(va_arg(args, int));
 		count++;
-		return (count);
+		return (1);
 	}
 
 	else if (format[i + 1] == 's')
