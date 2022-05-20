@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdarg.h>
 #include "main.h"
 
 /**
@@ -44,6 +42,7 @@ int _printf(const char *format, ...)
  * @args: va_list
  * Return: count
  */
+
 int check_specifier(const char *format, int count, int i, va_list args)
 {
 	int j = 0;
@@ -55,12 +54,14 @@ int check_specifier(const char *format, int count, int i, va_list args)
 		count++;
 		return (count);
 	}
+
 	else if (format[i + 1] == 'c')
 	{
 		_putchar(va_arg(args, int));
 		count++;
 		return (count);
 	}
+
 	else if (format[i + 1] == 's')
 	{
 		str = va_arg(args, char *);
@@ -71,8 +72,10 @@ int check_specifier(const char *format, int count, int i, va_list args)
 			_putchar(str[j]);
 			count++;
 		}
+
 		return (count);
 	}
+
 	else
 	{
 		_putchar('%');
