@@ -10,8 +10,7 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	char *str;
-	int i, j, count = 0;
+	int i, count = 0;
 
 	va_start(args, format);
 
@@ -22,32 +21,53 @@ int _printf(const char *format, ...)
 			_putchar(format[i]);
 			count++;
 		}
-		else if (format[i + 1] == '%')
-		{
-			_putchar(format[i]);
-			count++;
-			i++;
-		}
-		else if (format[i + 1] == 'c')
-		{
-			_putchar(va_arg(args, int));
-			count++;
-			i++;
-		}
-		else if (format[i + 1] == 's')
-		{
-			str = va_arg(args, char *);
-			for (j = 0; str[j] != '\0'; j++)
-			{
-				_putchar(str[j]);
-				count++;
-			}
-			i++;
-		}
 		else
-			_putchar('%');
-		count++;
+		{
+			count = check_specifier(format, count, i, args);
+			i++;
+		}
 	}
 	va_end(args);
+	return (count);
+}
+
+/**
+ * check_specifier - checks for specifier
+ * @format: format string
+ * @count: char to be printed
+ * @i: format string iterator
+ * @args: va_list
+ * Return: count
+ */
+int check_specifier(const char *format, int count, int i, va_list args)
+{
+	int j = 0;
+	char *str;
+
+	if (format[i + 1] == '%')
+	{
+		_putchar(format[i]);
+		count++;
+		return (count);
+	}
+	else if (format[i + 1] == 'c')
+	{
+		_putchar(va_arg(args, int));
+		count++;
+		return (count);
+	}
+	else if (format[i + 1] == 's')
+	{
+		str = va_arg(args, char *);
+		for (j = 0; str[j] != '\0'; j++)
+		{
+			_putchar(str[j]);
+			count++;
+		}
+		return (count);
+	}
+	else
+		_putchar('%');
+	count++;
 	return (count);
 }
