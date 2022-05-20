@@ -80,5 +80,5 @@ int check_specifier(const char *format, int count, int i, va_list args)
 		count = count + 2;
 		return (count);
 	}
-	return (count);
+	return (-1);
 }
