@@ -67,7 +67,11 @@ int check_specifier(const char *format, int count, int i, va_list args)
 		return (count);
 	}
 	else
+	{
 		_putchar('%');
-	count++;
+		_putchar(format[i + 1]);
+		count++;
+		return (count);
+	}
 	return (count);
 }
