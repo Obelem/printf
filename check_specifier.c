@@ -14,6 +14,9 @@ int check_specifier(const char *format, int count, int i, va_list args)
 	int j = 0;
 	char *str;
 
+	if (str == NULL)
+		str = "(null)";
+
 	if (format[i + 1] == '%')
 	{
 		_putchar(format[i]);
