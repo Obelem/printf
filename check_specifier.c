@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * check_specifier - checks for specifier
  * @format: format string
