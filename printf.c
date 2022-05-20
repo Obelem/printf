@@ -62,8 +62,6 @@ int check_specifier(const char *format, int count, int i, va_list args)
 	else if (format[i + 1] == 's')
 	{
 		str = va_arg(args, char *);
-		if (!str)
-			return NULL;
 		for (j = 0; str[j] != '\0'; j++)
 		{
 			_putchar(str[j]);
