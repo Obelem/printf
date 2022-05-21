@@ -28,8 +28,6 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] == '\0')
 				return (-1);
-			if (format[i + 1] == ' ' && format[i + 2] == '\0')
-				return (-1);
 			count = check_specifier(format, count, i, args);
 			if (count == -1)
 				break;
