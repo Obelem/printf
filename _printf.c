@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 		if (format[i] != '%')
 		{
 			_putchar(format[i]);
-			if (count == 2)
+			if (count == -2)
 				return (-1);
 			count++;
 		}
@@ -30,8 +30,6 @@ int _printf(const char *format, ...)
 		{
 			count = check_specifier(format, count, i, args);
 			if (count == -1)
-				break;
-			if (count == 2)
 				break;
 			i++;
 		}
