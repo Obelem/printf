@@ -15,6 +15,8 @@ int (*check_specifier(const char *format))(va_list args)
 	print_t p[] = {
 		{"c", print_c},
 		{"s", print_s},
+		{"i", print_i},
+		{"d", print_d},
 		{NULL, NULL}
 	};
 
