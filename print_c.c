@@ -1,6 +1,6 @@
 #include "main.h"
 
-/*
+/**
  * print_c - prints a char
  * @c: char to print
  *
