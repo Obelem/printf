@@ -4,6 +4,7 @@
  *
  * Return: number of digits printed
  */
+
 int print_b(va_list b)
 {
 	unsigned int n, m, i, sum;
