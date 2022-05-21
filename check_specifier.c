@@ -9,46 +9,20 @@
  * Return: count
  */
 
-int check_specifier(const char *format, int count, int i, va_list args)
+int (*check_specifier(const char *format))(va_list args)
 {
-	int j = 0;
-	char *str;
+	unsigned int i;
+	print_t p[] = {
+		{"c", print_c},
+		{"s", print_s},
+		{NULL, NULL}
+	};
 
-
-	if (format[i + 1] == '%')
+	for (i = 0; p[i].t != NULL; i++)
 	{
-		_putchar(format[i]);
-		count++;
-		return (count);
+		if (*(p[i].t) == *format)
+			break;
 	}
 
-	else if (format[i + 1] == 'c')
-	{
-		_putchar(va_arg(args, int));
-		count++;
-		return (count);
-	}
-
-	else if (format[i + 1] == 's')
-	{
-		str = va_arg(args, char *);
-		if (str == NULL)
-			str = "(null)";
-		for (j = 0; str[j] != '\0'; j++)
-		{
-			_putchar(str[j]);
-			count++;
-		}
-
-		return (count);
-	}
-
-	else
-	{
-		_putchar('%');
-		_putchar(format[i + 1]);
-		count = count + 2;
-		return (count);
-	}
-	return (count);
+	return (p[i].f);
 }
