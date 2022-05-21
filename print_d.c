@@ -4,7 +4,7 @@
  * print_d - prints an integer
  * @d: integer to print
  *
- * Return: number of chars and digits printed
+ * Return: number of chars and digits to print
  */
 
 int print_d(va_list d)
