@@ -12,11 +12,11 @@
  * @f: function to print
  */
 
-typedef struct print
+typedef struct print_struct
 {
 	char *t;
 	int (*f)(va_list);
-} print_t;
+} print_type;
 
 int _printf(const char *format, ...);
 int _putchar(char c);
