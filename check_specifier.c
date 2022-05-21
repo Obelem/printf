@@ -17,6 +17,7 @@ int (*check_specifier(const char *format))(va_list args)
 		{"s", print_s},
 		{"i", print_i},
 		{"d", print_d},
+		{"b", print_b},
 		{NULL, NULL}
 	};
 
