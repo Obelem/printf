@@ -20,10 +20,8 @@ typedef struct print
 
 int _printf(const char *format, ...);
 int _putchar(char c);
-int check_specifier(const char *format, int count, int i, va_list args);
-/*
 int print_c(va_list c);
 int print_s(va_list s);
 int (*check_specifier(const char *format))(va_list);
-*/
+
 #endif
