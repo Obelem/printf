@@ -47,9 +47,8 @@ int check_specifier(const char *format, int count, int i, va_list args)
 	{
 		_putchar('%');
 		_putchar(format[i + 1]);
-		return (-2);
-		/*count = count + 2;
-		return (count);*/
+		count = count + 2;
+		return (count);
 	}
 	return (count);
 }

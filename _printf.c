@@ -22,8 +22,6 @@ int _printf(const char *format, ...)
 		if (format[i] != '%')
 		{
 			_putchar(format[i]);
-			if (count == -2)
-				return (-1);
 			count++;
 		}
 		else
