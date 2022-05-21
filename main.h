@@ -18,6 +18,7 @@ typedef struct print_struct
 	int (*f)(va_list);
 } print_type;
 
+
 int _printf(const char *format, ...);
 int _putchar(char c);
 int print_c(va_list c);
