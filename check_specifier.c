@@ -12,7 +12,7 @@
 int (*check_specifier(const char *format))(va_list args)
 {
 	unsigned int i;
-	print_t p[] = {
+	print_type p[] = {
 		{"c", print_c},
 		{"s", print_s},
 		{"i", print_i},
