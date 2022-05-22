@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * print_b - takes an unsigned int and prints it in binary notation
  * @b: unsigned in to print
