@@ -7,7 +7,7 @@
 
 
 /**
- * struct print - structure for printing various types
+ * struct print_struct - structure for printing various types
  * @t: type to print
  * @f: function to print
  */
@@ -30,6 +30,7 @@ int print_u(va_list u);
 int print_o(va_list o);
 int print_x(va_list x);
 int print_X(va_list X);
+int print_S(va_list S);
 int (*check_specifier(const char *format))(va_list);
 int print_hex(unsigned int n, unsigned int c);
 
