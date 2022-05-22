@@ -1,7 +1,7 @@
 #include "main.h"
 
 
-unsigned long _pow(unsigned int base, unsigned int exponent);
+static unsigned long _pow(unsigned int base, unsigned int exponent);
 /**
  * _pow - calculates an exponent
  * @base: base of exponent
