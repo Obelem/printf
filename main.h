@@ -33,6 +33,6 @@ int print_X(va_list X);
 int print_S(va_list S);
 int (*check_specifier(const char *format))(va_list);
 int print_hex(unsigned int n, unsigned int c);
-static int hex_print(char c);
+int hex_print(char c);
 
 #endif
