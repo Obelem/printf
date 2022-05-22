@@ -18,6 +18,10 @@ int (*check_specifier(const char *format))(va_list args)
 		{"i", print_i},
 		{"d", print_d},
 		{"b", print_b},
+		{"u", print_u},
+		{"o", print_o},
+		{"x", print_x},
+		{"X", print_X},
 		{NULL, NULL}
 	};
 
