@@ -31,5 +31,6 @@ int print_o(va_list o);
 int print_x(va_list x);
 int print_X(va_list X);
 int (*check_specifier(const char *format))(va_list);
+int print_hex(unsigned int n, unsigned int c);
 
 #endif
