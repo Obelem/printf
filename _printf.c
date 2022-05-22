@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 /**
  *  _printf - prints %c and %s format specifier
  *  @format: format string
