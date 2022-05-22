@@ -9,7 +9,7 @@ int print_R(va_list R)
 {
 	char *str;
 	unsigned int i, j;
-	int ocunt = 0;
+	int count = 0;
 	char in[] = "ABCDEFGHIJLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char out[] = "NOPQRSTUVWXYZABCDEFGHIJLMnopqrstuvwxyzabcdefghijklm";
 
